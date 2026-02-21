@@ -31,8 +31,8 @@ func checkServer(url string, expectedStatus int) {
 func main() {
 	fmt.Println("--- Starting Tests ---")
 
-	checkServer("http://localhost:8081", 200)
-	checkServer("http://localhost:8082", 503)
+	checkServer("http://nginx-service:8081", 200)
+	checkServer("http://nginx-service:8082", 503)
 
 	fmt.Println("-----------------------")
 	fmt.Println("All tests passed successfully")
