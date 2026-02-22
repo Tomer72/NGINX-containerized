@@ -31,7 +31,8 @@ Dockerfile: Utilizes a multi-stage build. The first stage compiles the Go binary
 
 ----- Startup Instructions -----
 
-Ensure that ports 8081 and 8082 are available on your local machine.
+- Ensure that ports 8081 and 8082 are available on your local machine.
+- Use .env.example file to set the URL for each nginx server on the real .env file, using the ports mentioned above.
 
 Clone the repository and navigate to the project's root directory.
 
