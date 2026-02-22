@@ -7,7 +7,7 @@ This project implements a containerized environment featuring two NGINX servers 
 
 To fulfill the non-functional requirement of keeping the image sizes as small as possible, optimizations were made across both components:
 
-Testing Stage: I conducted an analysis between Python script and Go script. By utilizing Go with a multi-stage build and a scratch base image, I reduced the testing image size to 12.2MB (compared to an 88.5MB Python equivalent).
+Testing Stage: I conducted an analysis between Python script and Go script. By utilizing Go with a multi-stage build and a scratch base image, I reduced the testing image size to 11.9MB (compared to an 88.5MB Python equivalent).
 
 NGINX Stage: there was a functional requirement to use the ubuntu base image, I implemented cleanups (removing apt-cache, unused lists, and manuals), reducing the final NGINX image to 150MB.
 

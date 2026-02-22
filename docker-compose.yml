@@ -1,13 +1,15 @@
 
 services:
   nginx-service:
-    image: nginx-ubuntu-optimized
+    build: ./nginx
+    image: nginx-ubuntu-servers
     ports:
       - "8081:8081"
       - "8082:8082"
     restart: always
   
   tester-service:
+    build: ./testing
     image: go-tester
     depends_on:
       - nginx-service
