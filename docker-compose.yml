@@ -11,3 +11,7 @@ services:
     image: go-tester
     depends_on:
       - nginx-service
+    
+    environment:
+      - SERVER1_URL=${SERVER1_URL}
+      - SERVER2_URL=${SERVER2_URL}

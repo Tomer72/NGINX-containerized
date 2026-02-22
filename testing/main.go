@@ -29,10 +29,19 @@ func checkServer(url string, expectedStatus int) {
 }
 
 func main() {
+
+	url1 := os.Getenv("SERVER1_URL")
+	url2 := os.Getenv("SERVER2_URL")
+
+	if url1 == "" || url2 == "" {
+		fmt.Println("[FAILURE] env variable not found")
+	}
+
+
 	fmt.Println("--- Starting Tests ---")
 
-	checkServer("http://nginx-service:8081", 200)
-	checkServer("http://nginx-service:8082", 503)
+	checkServer(url1, 200)
+	checkServer(url2, 503)
 
 	fmt.Println("-----------------------")
 	fmt.Println("All tests passed successfully")
